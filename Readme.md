@@ -2,16 +2,20 @@
 
 ## About the project
 
-The **Python Piscine for Data Science** is a 42Network project composed of five modules designed to introduce and explore the Python programming language.
+**Python Piscine for Data Science** is a 42Network project composed of five modules designed to introduce and explore the Python programming language.
 
 ## Getting started 
 
 Run the exercises in a virtual environment to use `flake8` norm:
 
+1. Create a virtual environment
+
 ```bash
 python3 -m virtualenv venv
 . venv/bin/activate
 ```
+
+2. Install `flake8` in the virtual environment:
 
 ```bash
 pip install flake8
@@ -19,7 +23,7 @@ pip install flake8
 
 ## Resources
 
-I started this project by following **Neetcode**'s courses **Python for Beginners** and **Python OOP***. Available here : https://neetcode.io/courses
+I started this project by following **Neetcode**'s courses **Python for Beginners** and **Python OOP**. Available here : https://neetcode.io/courses
 
 Below is the list of additional resources I used while completing each module. 
 

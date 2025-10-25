@@ -2,6 +2,9 @@ import sys
 
 
 def count_characters(input_str: str):
+    """Takes a single string argument and displays the sums of its upper-case
+    characters, lower-case characters, punctuation characters, digits
+    and spaces."""
     counts = {
         'upper': 0,
         'lower': 0,
