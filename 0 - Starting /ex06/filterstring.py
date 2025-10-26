@@ -12,12 +12,12 @@ def main():
 
         if input_str.isdigit():
             raise AssertionError("the arguments are bad")
-        
+
         invisible_chars = {
             "\t", "\n", "\r", "\v", "\f",
-            "\u00A0", "\u2000", "\u2001", "\u2002", "\u2003", "\u2004", "\u2005",
+            "\u00A0", "\u2000", "\u2001", "\u2002", "\u2003", "\u2004",
             "\u2006", "\u2007", "\u2008", "\u2009", "\u200A", "\u200B",
-            "\u202F", "\u205F", "\u3000", "\uFEFF"
+            "\u202F", "\u205F", "\u3000", "\uFEFF", "\u2005"
         }
 
         for char in input_str:
