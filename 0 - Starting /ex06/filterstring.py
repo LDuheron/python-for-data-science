@@ -8,15 +8,18 @@ def main():
             raise AssertionError("the arguments are bad")
 
         input_str = sys.argv[1]
+
         if input_str.isdigit():
             raise AssertionError("the arguments are bad")
+
+
         input_number = int(sys.argv[2])
 
-        splitted_str = input_str.split()
 
-        # print("Okay")
-        # result = ft_filter(lambda(x) x > input_number, splitted_str)
-        # print(result)
+        words = input_str.split()
+
+        result = ft_filter(lambda word: len(word) > input_number, words)
+        print(result)
 
     except AssertionError as error:
         print(f"AssertionError: {error}")

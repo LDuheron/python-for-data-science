@@ -5,8 +5,8 @@ def ft_filter(function, iterable):
 
     new_iterable = iter(iterable)
     if function is None:
-        new_iterable = (x for x in iterable if x)
+        new_iterable = [item for item in iterable if item]
     else:
-        new_iterable = (x for x in iterable if function(x))
+        new_iterable = [item for item in iterable if function(item)]
 
     return new_iterable
