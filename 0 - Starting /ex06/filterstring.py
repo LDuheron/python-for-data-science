@@ -4,6 +4,7 @@ from ft_filter import ft_filter
 
 
 def main():
+    """Checks arguments and calls filter"""
     try:
         assert len(sys.argv) == 3, "the arguments are bad"
 
