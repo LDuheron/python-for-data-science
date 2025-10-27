@@ -38,6 +38,8 @@ Introduction about the basics of the Python Programming Language.
 
 **Python sys library:** https://docs.python.org/fr/3/library/sys.html
 
+**Python native methods:** https://docs.python.org/fr/3.13/library/functions.html#all
+
 ## 1 - Array
 Discovery of arrays, their manipulations and work on images. 
 

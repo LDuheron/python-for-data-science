@@ -41,8 +41,8 @@ def main():
     argument_count = len(sys.argv)
 
     try:
-        if len(sys.argv) > 2:
-            raise AssertionError("more than one argument is provided")
+
+        assert argument_count <= 2, "more than one argument is provided"
 
         if argument_count == 1:
             user_input = input("What is the text to count?\n")

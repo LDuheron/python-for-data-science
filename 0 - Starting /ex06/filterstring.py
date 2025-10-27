@@ -5,8 +5,7 @@ from ft_filter import ft_filter
 
 def main():
     try:
-        if len(sys.argv) != 3:
-            raise AssertionError("the arguments are bad")
+        assert len(sys.argv) == 3, "the arguments are bad"
 
         input_str = sys.argv[1]
 

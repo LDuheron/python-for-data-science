@@ -6,8 +6,7 @@ if argument_count == 1:
     sys.exit(0)
 
 try:
-    if len(sys.argv) != 2:
-        raise AssertionError("more than one argument is provided")
+    assert argument_count == 2, "more than one argument is provided"
 
     user_input = int(sys.argv[1])
 
