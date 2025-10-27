@@ -38,6 +38,8 @@ def count_characters(input_str: str):
 
 
 def main():
+    """Checks the validity of inputs and calls count_characters()"""
+
     argument_count = len(sys.argv)
 
     try:
@@ -45,7 +47,8 @@ def main():
         assert argument_count <= 2, "more than one argument is provided"
 
         if argument_count == 1:
-            user_input = input("What is the text to count?\n")
+            print("What is the text to count?")
+            user_input = sys.stdin.readline()
         else:
             user_input = sys.argv[1]
 

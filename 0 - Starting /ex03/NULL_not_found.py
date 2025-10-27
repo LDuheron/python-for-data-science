@@ -4,11 +4,11 @@ def NULL_not_found(object: any) -> int:
 
     if object != object:
         print(f'Cheese: {object} {obj_type}')
-        return 1
+        return 0
 
     if object is False:
         print(f'Fake: {object} {obj_type}')
-        return 1
+        return 0
 
     is_null = {
         'Zero': 0,
@@ -19,7 +19,7 @@ def NULL_not_found(object: any) -> int:
     for key, value in is_null.items():
         if object == value:
             print(f'{key}: {value} {obj_type}')
-            return 1
+            return 0
 
     print("Type not Found")
-    return 0
+    return 1
