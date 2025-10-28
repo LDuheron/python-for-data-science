@@ -16,7 +16,11 @@ try:
         print("I'm Odd.")
 
 except ValueError:
-    print("AssertionError: argument is not an integer")
+    print("ValueError: argument is not an integer")
+    sys.exit(1)
+
+except AssertionError as error:
+    print(f"AssertionError: {error}")
     sys.exit(1)
 
 except Exception as error:

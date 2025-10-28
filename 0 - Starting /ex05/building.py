@@ -63,7 +63,7 @@ def main():
         sys.exit(1)
 
     except ValueError:
-        print("AssertionError: argument is not an integer")
+        print("ValueError: argument is not an integer")
         sys.exit(1)
 
 
