@@ -30,7 +30,7 @@ Returns:
         truncated_family = array_family[start:end]
         print(f"My new shape is : {truncated_family.shape}")
 
-        return truncated_family
+        return np.array(truncated_family).tolist()
 
     except AssertionError as error:
         print(f"AssertionError: {error}")
