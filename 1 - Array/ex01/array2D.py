@@ -1,6 +1,3 @@
-import numpy as np
-
-
 def slice_me(family: list, start: int, end: int) -> list:
     """Prints the shape of given 2D array and returns a truncated
 version of the array based on the provided start and end arguments.
@@ -24,13 +21,12 @@ Returns:
         assert all(len(elem) == len_row for elem in family
                    ), "elements in the list must be the same size"
 
-        array_family = np.array(family)
-        print(f"My shape is : {array_family.shape}")
+        print(f"My shape is : {len(family)}, {len_row}")
 
-        truncated_family = array_family[start:end]
-        print(f"My new shape is : {truncated_family.shape}")
+        new_family = family[start:end]
+        print(f"My new shape is : ({len(new_family)}, {len(new_family[0])})")
 
-        return np.array(truncated_family).tolist()
+        return new_family
 
     except AssertionError as error:
         print(f"AssertionError: {error}")
