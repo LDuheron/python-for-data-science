@@ -21,7 +21,7 @@ Returns:
         assert all(len(elem) == len_row for elem in family
                    ), "elements in the list must be the same size"
 
-        print(f"My shape is : {len(family)}, {len_row}")
+        print(f"My shape is : ({len(family)}, {len_row})")
 
         new_family = family[start:end]
         print(f"My new shape is : ({len(new_family)}, {len(new_family[0])})")
