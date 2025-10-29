@@ -14,16 +14,20 @@ Returns:
     list: truncated version of the array
 """
     try:
-        assert isinstance(family, list) and isinstance(start, int) and isinstance(end, int), "expected args <list, int, int>"
+        assert isinstance(family, list), "expected args <list, int, int>"
 
-        # assert all(
-        #     isinstance(item, (int, float)) for item in family
-        #     ), "elements of the list must be integers or floats"
+        assert isinstance(start, int), "expected args <list, int, int>"
+
+        assert isinstance(end, int), "expected args <list, int, int>"
+
+        len_row = len(family[0])
+        assert all(len(elem) == len_row for elem in family
+                   ), "elements in the list must be the same size"
 
         array_family = np.array(family)
         print(f"My shape is : {array_family.shape}")
 
-        truncated_family = family[start:end]
+        truncated_family = array_family[start:end]
         print(f"My new shape is : {truncated_family.shape}")
 
         return truncated_family
@@ -33,6 +37,3 @@ Returns:
 
     except Exception as error:
         print(f"Error: {error}")
-
-
-# print(slice_me.__doc__)
