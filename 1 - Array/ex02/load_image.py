@@ -1,23 +1,28 @@
 import numpy as np
 from PIL import Image
 
-def ft_load(path: str):
+
+def ft_load(path: str) -> list:
     """Loads an image, prints its format and its pixels content in RGB format.
 Args:
-    Path (str): path of the image to load
+    path (str): path of the image to load.
 
 Returns:
-    
+    list: list of given image pixels content in RGB format.
 """
     try:
         assert isinstance(path, str), "Arg must be of type str"
         img = Image.open(path)
-    
-        print(f"The shape of image is: {img.size}")
 
         if img.mode != "RBG":
             img = img.convert("RGB")
-       
+
+        image_as_array = np.array(img)
+
+        print(f"The shape of image is: {np.shape(image_as_array)}")
+
+        return image_as_array
+
     except AssertionError as error:
         print(f"AssertionError: {error}")
 
