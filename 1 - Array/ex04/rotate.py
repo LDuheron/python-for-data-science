@@ -41,10 +41,10 @@ def rotate(input_array: np.ndarray) -> np.ndarray:
     """Rotate an image and prints informations.
 
 Args:
-    array_input (np.ndarray): numpy_array of the image to zoom into.
+    array_input (np.ndarray): numpy_array of the image to rotate.
 
 Returns:
-    np.ndarray: A 3D numpy array of shape (height, width) representing the
+    np.ndarray: A numpy array of shape (height, width) representing the
                     transposed grayscale image.
 """
     try:
