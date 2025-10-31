@@ -12,10 +12,10 @@ Returns:
     try:
         assert isinstance(path, str), "Expected 'path' to be str"
 
-        df = pd.read_csv(path)
-        print(f"Loading dataset of dimensions {df.shape}")
+        dataFrame = pd.read_csv(path, index_col=0)
+        print(f"Loading dataset of dimensions {dataFrame.shape}")
 
-        return df
+        return dataFrame
 
     except AssertionError as error:
         print(f"AssertionError: {error}")
