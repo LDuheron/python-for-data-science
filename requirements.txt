@@ -1,0 +1,5 @@
+--upgrade pip
+flake8
+numpy
+Pillow
+matplotlib

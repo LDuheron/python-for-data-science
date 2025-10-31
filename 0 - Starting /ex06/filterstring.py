@@ -20,9 +20,8 @@ def main():
             "\u202F", "\u205F", "\u3000", "\uFEFF", "\u2005"
         }
 
-        for char in input_str:
-            if char in string.punctuation or char in invisible_chars:
-                raise AssertionError("the arguments are bad")
+		if any(char in string.punctuation or char in invisible_chars for char in input_str):
+			raise AssertionError("the arguments are bad")
 
         input_number = int(sys.argv[2])
 

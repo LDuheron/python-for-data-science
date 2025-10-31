@@ -58,9 +58,9 @@ def main():
         print(f"AssertionError: {error}")
         sys.exit(1)
 
-    except Exception as error:
+    except _:
         print(f"Error: {error}")
-        sys.exit(1)
+        # sys.exit(1)
 
     except ValueError:
         print("ValueError: argument is not an integer")

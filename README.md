@@ -15,10 +15,10 @@ python3 -m virtualenv venv
 . venv/bin/activate
 ```
 
-2. Install `flake8` in the virtual environment:
+2. Install requirements in the virtual environment:
 
 ```bash
-pip install flake8
+pip install -r requirements.txt
 ```
 
 ## Resources
@@ -42,6 +42,12 @@ Introduction about the basics of the Python Programming Language.
 
 ## 1 - Array
 Discovery of arrays, their manipulations and work on images. 
+
+**Python zip et unzip:** https://medium.com/norsys-octogone/exploration-de-python-zip-et-unzip-b1d8b7cec8d9 
+
+**Reading images in Python:** https://www.geeksforgeeks.org/python/reading-images-in-python/
+
+**Python PIL | Image.open() method:** https://www.geeksforgeeks.org/python/python-pil-image-open-method/
 
 ## 2 - DataTable
 Load, manipulate and display datatable

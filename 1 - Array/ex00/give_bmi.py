@@ -26,10 +26,10 @@ Returns:
             isinstance(item, (int, float)) for item in weight
             ), "the arguments must be lists of elements type int or float"
 
-        bmi = []
-        for elem_w, elem_h in zip(weight, height):
-            bmi.append(elem_w/(elem_h**2))
-
+        bmi = [
+			elem_w/(elem_h**2)
+        	for elem_w, elem_h in zip(weight, height)
+		]
         return bmi
 
     except AssertionError as error:
