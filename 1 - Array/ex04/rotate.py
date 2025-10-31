@@ -58,7 +58,7 @@ Returns:
 
         img = Image.fromarray(transposed_array)
         plt.figure(figsize=(6, 6), facecolor='white')
-        plt.title("Zoomed grayscale image")
+        plt.title("Transposed and zoomed grayscale image")
         plt.imshow(img, cmap='gray')
         plt.show()
 
