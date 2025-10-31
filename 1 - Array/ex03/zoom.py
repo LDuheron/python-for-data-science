@@ -16,7 +16,7 @@ Returns:
                     grayscale image.
 """
     try:
-        assert isinstance(array_input, np.ndarray), "Arg must be of type np.ndarray"
+        assert isinstance(array_input, np.ndarray), "Arg must be np.ndarray"
 
         resized_array = array_input[100:500, 450:850]
 
