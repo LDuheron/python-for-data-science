@@ -44,8 +44,8 @@ Args:
     array_input (np.ndarray): numpy_array of the image to zoom into.
 
 Returns:
-    np.ndarray: A 3D numpy array of shape (height, width, 1) representing the
-                    grayscale image.
+    np.ndarray: A 3D numpy array of shape (height, width) representing the
+                    transposed grayscale image.
 """
     try:
         assert isinstance(input_array, np.ndarray), "Arg must be np.ndarray"
