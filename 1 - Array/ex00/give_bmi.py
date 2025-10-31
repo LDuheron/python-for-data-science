@@ -27,9 +27,9 @@ Returns:
             ), "the arguments must be lists of elements type int or float"
 
         bmi = [
-			elem_w/(elem_h**2)
-        	for elem_w, elem_h in zip(weight, height)
-		]
+            elem_w/(elem_h**2)
+            for elem_w, elem_h in zip(weight, height)
+        ]
         return bmi
 
     except AssertionError as error:

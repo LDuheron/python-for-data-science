@@ -11,7 +11,7 @@ Returns:
     list: truncated version of the array
 """
     try:
-		error_msg = "expected args <list, int, int>"
+        error_msg = "expected args <list, int, int>"
 
         assert isinstance(family, list), error_msg
 
@@ -21,9 +21,9 @@ Returns:
 
         len_row = len(family[0])
         assert all(
-			len(elem) == len_row
-			for elem in family
-		), "elements in the list must be the same size"
+            len(elem) == len_row
+            for elem in family
+        ), "elements in the list must be the same size"
 
         print(f"My shape is : ({len(family)}, {len_row})")
 
