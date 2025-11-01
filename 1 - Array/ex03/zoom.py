@@ -15,7 +15,6 @@ Returns:
     np.ndarray: A 3D numpy array of shape (height, width, 1) representing the
                     grayscale image.
 """
-    try:
         assert isinstance(array_input, np.ndarray), "Arg must be np.ndarray"
 
         resized_array = array_input[100:500, 450:850]
@@ -34,11 +33,6 @@ Returns:
 
         return array_3d
 
-    except AssertionError as error:
-        print(f"AssertionError: {error}")
-
-    except Exception as error:
-        print(f"Error: {error}")
 
 
 def main():

@@ -50,10 +50,9 @@ Returns:
     try:
         assert isinstance(input_array, np.ndarray), "Arg must be np.ndarray"
 
-        if input_array.ndim == 3:
-            squeezed_array = np.squeeze(input_array, axis=2)
+        transposed_array = np.array([list(x) for x
+                                    in zip(*np.squeeze(input_array, axis=2))])
 
-        transposed_array = np.transpose(squeezed_array)
         print(f"New shape after Transpose: {transposed_array.shape}")
 
         img = Image.fromarray(transposed_array)

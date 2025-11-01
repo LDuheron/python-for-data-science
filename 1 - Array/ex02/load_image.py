@@ -14,7 +14,7 @@ Returns:
         assert isinstance(path, str), "Arg must be of type str"
         img = Image.open(path)
 
-        if img.mode != "RBG":
+        if img.mode != "RGB":
             img = img.convert("RGB")
 
         image_as_array = np.array(img)
