@@ -2,42 +2,43 @@ from abc import ABC, abstractmethod
 
 
 class Character(ABC):
-    """A class representing a character which is defined
-by a name and a status"""
+    """Abstract base class representing a character.
+Each character is defined by a name and a status"""
+
     @abstractmethod
     def __init__(self, first_name, is_alive=True):
-        """Initiates the Character class
+        """Initiates a Character instance.
 
 Args:
-    self: class convention
-    first_name (string) : name of the Character
-    is_alive (bool) : status of the Character,
-                            set at True by default
-        """
+    first_name (str) : the Character's first name
+    is_alive (bool, optional): Whether the character is alive. Defaults to True
+"""
         self.first_name = first_name
         self.is_alive = is_alive
 
-    # @abstractmethod
     def set_is_alive(self, state: bool):
-        """Set the is_alive_value to the given bool value"""
+        """Set the character's living status.
+
+Args:
+    state (bool): True if the character is alive, False otherwise.
+"""
         self.is_alive = state
 
 
 class Stark(Character):
-    """Create a class Stark which inherits from Character class"""
+    """A class representing a Stark.
+Inherits from the Character class.
+"""
     def __init__(self, first_name, is_alive=True):
-        """Initiates the Stark class
+        """Initiates a Stark instance.
 
 Args:
-    self: class convention
-    first_name (string) : name of the Stark Character
-    is_alive (bool) : status of the Stark Character,
-                     set at True by default
-        """
+    first_name (str): The first name of the Stark character.
+    is_alive (bool, optional): Whether the Stark is alive. Defaults to True.
+"""
         super().__init__(first_name, is_alive)
 
     def die(self):
-        """Set the is_alive value to false calling the
-parent class method set_is_alive()"""
-        # self.is_alive = False
+        """Set the Stark character as dead calling the parent
+class method `set_is_alive(False)`."""
         super().set_is_alive(False)
