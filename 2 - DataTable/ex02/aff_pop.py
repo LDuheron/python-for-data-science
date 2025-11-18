@@ -9,9 +9,9 @@ Args:
 
 Returns:
     float : The value normalized."""
-    if value.endswith('k'):
+    if isinstance(value, str) and value.endswith('k'):
         normalized_value = float(value[:-1]) * 1000
-    elif value.endswith('M'):
+    elif isinstance(value, str) and value.endswith('M'):
         normalized_value = float(value[:-1]) * 1000000
     else:
         normalized_value = float(value)
