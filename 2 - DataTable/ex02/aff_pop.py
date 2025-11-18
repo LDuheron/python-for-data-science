@@ -3,6 +3,12 @@ from load_csv import load
 
 
 def normalize_data(value) -> float:
+    """Normalize data.
+Args:
+    value: The value to normalize.
+
+Return:
+    float : The value normalized."""
     if value.endswith('k'):
         normalized_value = float(value[:-1]) * 1000
     elif value.endswith('M'):
