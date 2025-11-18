@@ -1,26 +1,33 @@
 import matplotlib.pyplot as plt
-import matplotlib.ticker
 from load_csv import load
+
+
+def normalize_data(value) -> float:
+    if value.endswith('k'):
+        normalized_value = float(value[:-1]) * 1000
+    elif value.endswith('M'):
+        normalized_value = float(value[:-1]) * 1000000
+    else:
+        normalized_value = float(value)
+    return normalized_value
 
 
 def main():
     try:
         dataFrame = load("../data/population_total.csv")
-        Belgium = dataFrame.loc['Belgium']
-        France = dataFrame.loc['France']
+        Belgium = dataFrame.loc['Belgium'].map(normalize_data)
+        France = dataFrame.loc['France'].map(normalize_data)
 
         plt.figure()
-        plt.plot(Belgium, label='Belgium')
-        plt.plot(France, label='France')
+        plt.plot(Belgium[:'2050'], label='Belgium')
+        plt.plot(France[:'2050'], label='France')
 
         plt.title('Populations Projections')
         plt.xlabel('Year')
         plt.ylabel('Population')
-        plt.xticks(ticks=France.index[::40])
-        # plt.yticks(ticks=France.index[20:80])
-        # locator = matplotlib.ticker.MultipleLocator(base=20, offset=60)
-        # ax.yaxis.set_minor_locator(locator)
-        # ax.yaxis.set_major_locator(locator)
+        plt.xticks(ticks=France[:'2050'].index[::40])
+        plt.yticks([20_000_000, 40_000_000, 60_000_000], ["20M", "40M", "60M"])
+
         plt.legend()
         plt.show()
 
