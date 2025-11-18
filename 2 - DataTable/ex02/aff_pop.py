@@ -7,7 +7,7 @@ def normalize_data(value) -> float:
 Args:
     value: The value to normalize.
 
-Return:
+Returns:
     float : The value normalized."""
     if value.endswith('k'):
         normalized_value = float(value[:-1]) * 1000
