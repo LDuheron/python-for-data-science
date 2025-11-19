@@ -14,10 +14,13 @@ Returns:
 
         dataFrame = pd.read_csv(path, index_col=0)
         print(f"Loading dataset of dimensions {dataFrame.shape}")
+
         return dataFrame
 
     except AssertionError as error:
         print(f"AssertionError: {error}")
+        return None
 
     except Exception as error:
         print(f"Error: {error}")
+        return None

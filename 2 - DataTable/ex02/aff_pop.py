@@ -28,7 +28,7 @@ def main():
         plt.plot(Belgium[:'2050'], label='Belgium')
         plt.plot(France[:'2050'], label='France')
 
-        plt.title('Populations Projections')
+        plt.title('Population Projections')
         plt.xlabel('Year')
         plt.ylabel('Population')
         plt.xticks(ticks=France[:'2050'].index[::40])

@@ -19,6 +19,8 @@ Returns:
 
     except AssertionError as error:
         print(f"AssertionError: {error}")
+        return None
 
     except Exception as error:
         print(f"Error: {error}")
+        return None
